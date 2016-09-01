@@ -2,6 +2,18 @@
 
 Suppress eslint messages from lines which contain nolint comments.
 
+Example:
+
+```
+if (foo == 'bar') { // nolint
+
+}
+```
+
+This is useful in codebases which already have `nolint` declarations
+sprinkled throughout from use of jslint. Otherwise, it is recommended to
+use the builtin `eslint-disable` declaration instead.
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
@@ -29,8 +41,3 @@ Add `skip-nolint-lines` to the plugins section of your `.eslintrc` configuration
     ]
 }
 ```
-
-
-
-
-
